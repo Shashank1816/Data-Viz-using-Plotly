@@ -8,9 +8,20 @@ random_y = np.random.randint(1,101,100)
 
 # between 1 to 100 it gives us 100 integers
 # Now we'll plot the graph
-data=[go.Scatter(x=random_x, y=random_y, mode='markers')]
+data=[go.Scatter(x=random_x, 
+                y=random_y, 
+                mode='markers',
+                marker=dict(
+                    size=12,
+                    color='red',
+                    symbol='pentagon',
+                    line={'width':2}
+                ))]
 # Now we'll add labels and hovermodes before plotting
-layout=go.Layout(title='Hello First Plot', xaxis={'title':'MY X AXIS'} , yaxis=dict(title='MY Y AXIS'), hovermode='closest')
+layout=go.Layout(title='Hello First Plot',
+                 xaxis={'title':'MY X AXIS'} ,
+                  yaxis=dict(title='MY Y AXIS'), 
+                  hovermode='closest')
 # this on eis not a list , axis take the arguments as dictionaries
 
 # Now we'll pass the layout to the figure object which will then be passed to plot
