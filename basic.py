@@ -9,5 +9,10 @@ random_y = np.random.randint(1,101,100)
 # between 1 to 100 it gives us 100 integers
 # Now we'll plot the graph
 data=[go.Scatter(x=random_x, y=random_y, mode='markers')]
+# Now we'll add labels and hovermodes before plotting
+layout=go.Layout(title='Hello First Plot', xaxis={'title':'MY X AXIS'} , yaxis=dict(title='MY Y AXIS'), hovermode='closest')
+# this on eis not a list , axis take the arguments as dictionaries
 
-pyo.plot(data, filename="Scatter.html") # by default the file name is temp-plot.html but we can override it 
+# Now we'll pass the layout to the figure object which will then be passed to plot
+fig= go.Figure(data=data,layout=layout)
+pyo.plot(fig, filename="Scatter.html") # by default the file name is temp-plot.html but we can override it 
