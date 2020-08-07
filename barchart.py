@@ -22,7 +22,7 @@ trace3=go.Bar(x=df['NOC'],
             )
                                     
 data=[trace1,trace2,trace3]
-layout=go.Layout(title="Nested Bar Graph",
+layout=go.Layout(title="Stacked Bar Graph",
                 barmode='stack')
 fig=go.Figure(data=data, layout=layout)
 
